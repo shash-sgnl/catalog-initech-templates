@@ -1,0 +1,25 @@
+displayName: "Custom SoR"
+icon: ""
+description: "Template to create a custom SoR"
+address: "{{Input Required: Address}}"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+adapter:
+  hostname: "{{Input Required: Hostname}}"
+  port: 80
+  config: "{{Input Required: Config}}"
+  apiVersion: "V1"
+  disableTls: true
+  auth:
+    - oAuth2ClientCredentials:
+        clientId: "{{Input Required: Client-ID}}"
+        tokenUrl: "{{Input Required: Token-URL}}"
+        authStyle: "{{Input Required: AuthStyle}}"
+        clientSecret: "{{Input Required: Client-Secret}}"
+    - basic:
+        username: "{{Input Required: Username}}"
+        password: "{{Input Required: Password}}"
+    - bearer:
+        authToken: "{{Input Required: AuthToken}}"

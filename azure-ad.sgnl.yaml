@@ -1,0 +1,393 @@
+# Azure AD Configuration YAML for DS2.0
+displayName: "Azure AD"
+icon: |
+  PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMDEzRjg2Ii8+CjxwYXRoIGQ9Ik0xMi4yNzYzIDMyLjk1NTVMMzIgNDUuODI2MVY5LjVMMTIuMjc2MyAzMi45NTU1WiIgZmlsbD0iIzRGRTZGRiIvPgo8cGF0aCBkPSJNOCAzOC4wNTA0TDMyIDUzLjk3ODZWNDguODUwN0wxMC43NjY1IDM0Ljc1NzhMOCAzOC4wNTA0WiIgZmlsbD0iIzRGRTZGRiIvPgo8cGF0aCBkPSJNNTYgMzguMDUwNEwzMiA1My45Nzg2VjQ4Ljg1MDdMNTMuMjMzNSAzNC43NTc4TDU2IDM4LjA1MDRaIiBmaWxsPSIjMzY5QkU1Ii8+CjxwYXRoIGQ9Ik01MS43MjM3IDMyLjk1NTVMMzIgNDUuODI2MVY5LjVMNTEuNzIzNyAzMi45NTU1WiIgZmlsbD0iIzQyQTJFOCIvPgo8cGF0aCBkPSJNMTIuMjgxMiAzMi45NTA2TDEyLjI3NjMgMzIuOTU1NUwzMiA0NS44MjYxVjI4LjI0NzNMMTIuMjgxMiAzMi45NTA2WiIgZmlsbD0iIzk5RUNGQSIvPgo8cGF0aCBkPSJNNTEuNzIgMzIuOTUwNkw1MS43MjM3IDMyLjk1NTVMMzIgNDUuODI2MVYyOC4yNDczTDUxLjcyIDMyLjk1MDZaIiBmaWxsPSIjNTJCMURGIi8+Cjwvc3ZnPg==
+description: "Azure AD as a System of Record"
+address: "graph.microsoft.com"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+adapter:
+  hostname: "adapter.sgnl.svc.cluster.local"
+  port: 80
+  config: "ewoJInZlcnNpb24iOiAxLAoJImNvbmZpZyI6IHsKICAgICAgICAgICAgICAgICJmaWx0ZXJzIjoge30sCgkJInJlcXVlc3RUaW1lb3V0IjogIjEwcyIsCgkJImF6dXJlYWQiOiB7CiAgICAgICAgICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEuMCIKICAgICAgICAgICAgICAgIH0KCX0KfQ=="
+  apiVersion: "V1"
+  disableTls: true
+  auth:
+    - oAuth2ClientCredentials:
+        clientId: "{{Input Required: Client-ID}}"
+        scope: "https://graph.microsoft.com/.default"
+        tokenUrl: "https://login.microsoftonline.com/{{Input Required: Tenant-ID}}/oauth2/v2.0/token"
+        authStyle: InParams
+        clientSecret: "{{Input Required: Client-Secret}}"
+entities:
+  # Configuring complex attributes will cap the page size in AAD's API response to 100.
+  # See: https://learn.microsoft.com/en-us/graph/known-issues?view=graph-rest-1.0#some-limitations-apply-to-query-parameters
+  # We use the `$expand` filter to retrieve complex attributes.
+  User:
+    displayName: AADUser
+    externalId: User
+    description: User Entity in Azure AD
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 999
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        description: ID of the user
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: userPrincipalName
+        externalId: userPrincipalName
+        type: String
+        indexed: true
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: givenName
+        externalId: givenName
+        type: String
+      - name: jobTitle
+        externalId: jobTitle
+        type: String
+      - name: mail
+        externalId: mail
+        type: String
+      - name: mobilePhone
+        externalId: mobilePhone
+        type: String
+      - name: officeLocation
+        externalId: officeLocation
+        type: String
+      - name: preferredLanguage
+        externalId: preferredLanguage
+        type: String
+      - name: surname
+        externalId: surname
+        type: String
+      - name: accountEnabled
+        externalId: accountEnabled
+        type: Bool
+      - name: ageGroup
+        externalId: ageGroup
+        type: String
+      - name: city
+        externalId: city
+        type: String
+      - name: companyName
+        externalId: companyName
+        type: String
+      - name: consentProvidedForMinor
+        externalId: consentProvidedForMinor
+        type: String
+      - name: country
+        externalId: country
+        type: String
+      - name: createdDateTime
+        externalId: createdDateTime
+        type: DateTime
+      - name: creationType
+        externalId: creationType
+        type: String
+      - name: deletedDateTime
+        externalId: deletedDateTime
+        type: DateTime
+      - name: department
+        externalId: department
+        type: String
+      - name: employeeHireDate
+        externalId: employeeHireDate
+        type: DateTime
+      - name: employeeId
+        externalId: employeeId
+        type: String
+      - name: employeeType
+        externalId: employeeType
+        type: String
+      - name: externalUserState
+        externalId: externalUserState
+        type: String
+      - name: externalUserStateChangeDateTime
+        externalId: externalUserStateChangeDateTime
+        type: DateTime
+      - name: faxNumber
+        externalId: faxNumber
+        type: String
+      - name: ipAddress
+        externalId: ipAddress
+        type: String
+      - name: isResourceAccount
+        externalId: isResourceAccount
+        type: Bool
+      - name: lastPasswordChangeDateTime
+        externalId: lastPasswordChangeDateTime
+        type: DateTime
+      - name: legalAgeGroupClassification
+        externalId: legalAgeGroupClassification
+        type: String
+      - name: mailNickname
+        externalId: mailNickname
+        type: String
+        # Configuring `manager__id` will cause the page size in the AAD Users API to be capped at 100.
+      - name: manager__id
+        externalId: manager__id
+        type: String
+        indexed: true
+      - name: onPremisesDistinguishedName
+        externalId: onPremisesDistinguishedName
+        type: String
+      - name: onPremisesDomainName
+        externalId: onPremisesDomainName
+        type: String
+      - name: onPremisesImmutableId
+        externalId: onPremisesImmutableId
+        type: String
+      - name: onPremisesLastSyncDateTime
+        externalId: onPremisesLastSyncDateTime
+        type: DateTime
+      - name: onPremisesSamAccountName
+        externalId: onPremisesSamAccountName
+        type: String
+      - name: onPremisesSecurityIdentifier
+        externalId: onPremisessecurityIdentifier
+        type: String
+      - name: onPremisesSyncEnabled
+        externalId: onPremisesSyncEnabled
+        type: Bool
+      - name: onPremisesUserPrincipalName
+        externalId: onPremisesUserPrincipalName
+        type: String
+      - name: passwordPolicies
+        externalId: passwordPolicies
+        type: String
+      - name: postalCode
+        externalId: postalCode
+        type: String
+      - name: preferredDataLocation
+        externalId: preferredDataLocation
+        type: String
+      - name: showInAddressList
+        externalId: showInAddressList
+        type: Bool
+      - name: signInSessionsValidFromDateTime
+        externalId: signInSessionValidFromDateTime
+        type: DateTime
+      - name: state
+        externalId: state
+        type: String
+      - name: streetAddress
+        externalId: streetAddress
+        type: String
+      - name: usageLocation
+        externalId: usageLocation
+        type: String
+      - name: userType
+        externalId: userType
+        type: String
+      - name: businessPhones
+        externalId: businessPhones
+        type: String
+        list: true
+      - name: proxyAddresses
+        externalId: proxyAddresses
+        type: String
+        list: true
+      - name: otherMails
+        externalId: otherMails
+        type: String
+        list: true
+      - name: employeeOrgData__costCenter
+        externalId: employeeOrgData__costCenter
+        type: String
+      - name: employeeOrgData__division
+        externalId: employeeOrgData__division
+        type: String
+      - name: passwordProfile__forceChangePasswordNextSignIn
+        externalId: passwordProfile__forceChangePasswordNextSignIn
+        type: Bool
+      - name: passwordProfile__forceChangePasswordNextSignInWithMfa
+        externalId: passwordProfile__forceChangePasswordNextSignInWithMfa
+        type: Bool
+  Group:
+    description: "Group Entity in Azure AD"
+    displayName: AADGroup
+    externalId: Group
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 999
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: classification
+        externalId: classification
+        type: String
+      - name: createdDateTime
+        externalId: createdDateTime
+        type: DateTime
+      - name: creationOptions
+        externalId: creationOptions
+        type: String
+        list: true
+      - name: deletedDateTime
+        externalId: deletedDateTime
+        type: DateTime
+      - name: description
+        externalId: description
+        type: String
+      - name: displayName
+        externalId: displayName
+        type: String
+      - name: expirationDateTime
+        externalId: expirationDateTime
+        type: DateTime
+      - name: groupTypes
+        externalId: groupTypes
+        type: String
+        list: true
+      - name: isAssignableToRole
+        externalId: isAssignableToRole
+        type: Bool
+      - name: mail
+        externalId: mail
+        type: String
+      - name: mailEnabled
+        externalId: mailEnabled
+        type: Bool
+      - name: mailNickname
+        externalId: mailNickname
+        type: String
+      - name: membershipRule
+        externalId: membershipRule
+        type: String
+      - name: membershipRuleProcessingState
+        externalId: membershipRuleProcessingState
+        type: String
+      - name: onPremisesDomainName
+        externalId: onPremisesDomainName
+        type: String
+      - name: onPremisesLastSyncDateTime
+        externalId: onPremisesLastSyncDateTime
+        type: DateTime
+      - name: onPremisesNetBiosName
+        externalId: onPremisesNetBiosName
+        type: String
+      - name: onPremisesSamAccountName
+        externalId: onPremisesSamAccountName
+        type: String
+      - name: onPremisesSecurityIdentifier
+        externalId: onPremisesSecurityIdentifier
+        type: String
+      - name: onPremisesSyncEnabled
+        externalId: onPremisesSyncEnabled
+        type: Bool
+      - name: preferredDataLocation
+        externalId: preferredDataLocation
+        type: String
+      - name: preferredLanguage
+        externalId: preferredLanguage
+        type: String
+      - name: proxyAddresses
+        externalId: proxyAddresses
+        type: String
+        list: true
+      - name: renewedDateTime
+        externalId: renewedDateTime
+        type: DateTime
+      - name: resourceBehaviorOptions
+        externalId: resourceBehaviorOptions
+        type: String
+        list: true
+      - name: resourceProvisioningOptions
+        externalId: resourceProvisioningOptions
+        type: String
+        list: true
+      - name: securityEnabled
+        externalId: securityEnabled
+        type: Bool
+      - name: securityIdentifier
+        externalId: securityIdentifier
+        type: String
+      - name: theme
+        externalId: theme
+        type: String
+      - name: visibility
+        externalId: visibility
+        type: String
+      - name: assignedLabels
+        externalId: assignedLabels
+        type: String
+        list: true
+      - name: deletedDateTime
+        externalId: deletedDateTime
+        type: DateTime
+      - name: licenseProcessingState
+        externalId: licenseProcessingState
+        type: String
+  GroupMember:
+    description: "Group Member Entity in Azure AD"
+    displayName: AADGroupMember
+    externalId: GroupMember
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 999
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+      - name: memberId
+        externalId: memberId
+        type: String
+        indexed: true
+relationships:
+  UserManager:
+    name: Manager
+    fromAttribute: User.manager__id
+    toAttribute: User.id
+    # [TODO sc-11020] Give these a unique ID, rename both of these to Member,
+    # and keep corresponding path relationships unique below
+  UserMember:
+    name: Member
+    fromAttribute: GroupMember.memberId
+    toAttribute: User.id
+  GroupMember:
+    name: Member
+    fromAttribute: GroupMember.memberId
+    toAttribute: Group.id
+  MemberOf:
+    name: MemberOf
+    fromAttribute: GroupMember.groupId
+    toAttribute: Group.id
+  UserMemberGroup:
+    name: Group
+    path:
+      - relationship: UserMember
+        direction: Backward
+      - relationship: MemberOf
+        direction: Forward
+  GroupMemberGroup:
+    name: Group
+    path:
+      - relationship: GroupMember
+        direction: Backward
+      - relationship: MemberOf
+        direction: Forward

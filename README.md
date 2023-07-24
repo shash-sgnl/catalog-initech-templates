@@ -1,1 +1,1 @@
-# catalog-initech-templates
+# IniTech SGNL SoR Templates

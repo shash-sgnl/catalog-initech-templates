@@ -1,0 +1,240 @@
+# Okta Configuration YAML for DS2.0
+displayName: "Internal CRM"
+icon: |
+  PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgaGVpZ2h0PSI4MDBweCIgd2lkdGg9IjgwMHB4IiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiANCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6I0U0RUFGODsiIGQ9Ik00NzguMzMsNDM1LjU3NEgzMy42N2MtMTQuMTY4LDAtMjUuNjUzLTExLjQ4NS0yNS42NTMtMjUuNjUzVjEwMi4wNzkNCgljMC0xNC4xNjgsMTEuNDg1LTI1LjY1MywyNS42NTMtMjUuNjUzaDQ0NC42NmMxNC4xNjgsMCwyNS42NTMsMTEuNDg1LDI1LjY1MywyNS42NTN2MzA3Ljg0MQ0KCUM1MDMuOTgzLDQyNC4wODksNDkyLjQ5OCw0MzUuNTc0LDQ3OC4zMyw0MzUuNTc0eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzcwNzQ4NzsiIGQ9Ik0zMy42Nyw0MzUuNTc0aDk0LjA2M1Y3Ni40MjZIMzMuNjdjLTE0LjE2OCwwLTI1LjY1MywxMS40ODUtMjUuNjUzLDI1LjY1M3YzMDcuODQxDQoJQzguMDE3LDQyNC4wODksMTkuNTAyLDQzNS41NzQsMzMuNjcsNDM1LjU3NHoiLz4NCjxwYXRoIGQ9Ik00NzguMzMsNjguNDA5SDMzLjY3QzE1LjEwNSw2OC40MDksMCw4My41MTQsMCwxMDIuMDc5djMwNy44NDFjMCwxOC41NjYsMTUuMTA1LDMzLjY3LDMzLjY3LDMzLjY3aDQ0NC42Ng0KCWMxOC41NjYsMCwzMy42Ny0xNS4xMDUsMzMuNjctMzMuNjdWMTAyLjA3OUM1MTIsODMuNTE0LDQ5Ni44OTUsNjguNDA5LDQ3OC4zMyw2OC40MDl6IE0xNi4wMzMsNDA5LjkyMVYxMDIuMDc5DQoJYzAtOS43MjUsNy45MTItMTcuNjM3LDE3LjYzNy0xNy42MzdoODYuMDQ2djM0My4xMTVIMzMuNjdDMjMuOTQ1LDQyNy41NTcsMTYuMDMzLDQxOS42NDUsMTYuMDMzLDQwOS45MjF6IE00OTUuOTY3LDQwOS45MjENCgljMCw5LjcyNS03LjkxMiwxNy42MzctMTcuNjM3LDE3LjYzN2gtMzQyLjU4Vjg0LjQ0M2gzNDIuNThjOS43MjUsMCwxNy42MzcsNy45MTIsMTcuNjM3LDE3LjYzN1Y0MDkuOTIxeiIvPg0KPHBhdGggZD0iTTIwNC4xNTksMTEwLjYzYzAtNC40MjctMy41ODktOC4wMTctOC4wMTctOC4wMTdoLTM0LjIwNWMtNC40MjcsMC04LjAxNywzLjU4OS04LjAxNyw4LjAxNw0KCWMwLDQuNDI3LDMuNTg5LDguMDE3LDguMDE3LDguMDE3aDM0LjIwNUMyMDAuNTY5LDExOC42NDcsMjA0LjE1OSwxMTUuMDU4LDIwNC4xNTksMTEwLjYzeiIvPg0KPHBhdGggZD0iTTQyLjIyMSwxMTguNjQ3aDUxLjMwN2M0LjQyNywwLDguMDE3LTMuNTg5LDguMDE3LTguMDE3YzAtNC40MjctMy41ODktOC4wMTctOC4wMTctOC4wMTdINDIuMjIxDQoJYy00LjQyNywwLTguMDE3LDMuNTg5LTguMDE3LDguMDE3QzM0LjIwNSwxMTUuMDU4LDM3Ljc5NCwxMTguNjQ3LDQyLjIyMSwxMTguNjQ3eiIvPg0KPHBhdGggZD0iTTkzLjUyOCwxODguMTI1SDQyLjIyMWMtNC40MjcsMC04LjAxNywzLjU4OS04LjAxNyw4LjAxN3MzLjU4OSw4LjAxNyw4LjAxNyw4LjAxN2g1MS4zMDdjNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxNw0KCVM5Ny45NTYsMTg4LjEyNSw5My41MjgsMTg4LjEyNXoiLz4NCjxwYXRoIGQ9Ik05My41MjgsMjU2LjUzNEg0Mi4yMjFjLTQuNDI3LDAtOC4wMTcsMy41ODktOC4wMTcsOC4wMTdjMCw0LjQyNywzLjU4OSw4LjAxNyw4LjAxNyw4LjAxN2g1MS4zMDcNCgljNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN0MxMDEuNTQ1LDI2MC4xMjQsOTcuOTU2LDI1Ni41MzQsOTMuNTI4LDI1Ni41MzR6Ii8+DQo8cGF0aCBkPSJNOTMuNTI4LDMyNC45NDRINDIuMjIxYy00LjQyNywwLTguMDE3LDMuNTg5LTguMDE3LDguMDE3YzAsNC40MjcsMy41ODksOC4wMTcsOC4wMTcsOC4wMTdoNTEuMzA3DQoJYzQuNDI3LDAsOC4wMTctMy41ODksOC4wMTctOC4wMTdDMTAxLjU0NSwzMjguNTMzLDk3Ljk1NiwzMjQuOTQ0LDkzLjUyOCwzMjQuOTQ0eiIvPg0KPHBhdGggZD0iTTkzLjUyOCwyMjIuMzNINDIuMjIxYy00LjQyNywwLTguMDE3LDMuNTg5LTguMDE3LDguMDE3czMuNTg5LDguMDE3LDguMDE3LDguMDE3aDUxLjMwN2M0LjQyNywwLDguMDE3LTMuNTg5LDguMDE3LTguMDE3DQoJUzk3Ljk1NiwyMjIuMzMsOTMuNTI4LDIyMi4zM3oiLz4NCjxwYXRoIGQ9Ik05My41MjgsMjkwLjczOUg0Mi4yMjFjLTQuNDI3LDAtOC4wMTcsMy41ODktOC4wMTcsOC4wMTdjMCw0LjQyNywzLjU4OSw4LjAxNyw4LjAxNyw4LjAxN2g1MS4zMDcNCgljNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN0MxMDEuNTQ1LDI5NC4zMjgsOTcuOTU2LDI5MC43MzksOTMuNTI4LDI5MC43Mzl6Ii8+DQo8cGF0aCBkPSJNNzYuNDI2LDM3Ni4yNTFINDIuMjIxYy00LjQyNywwLTguMDE3LDMuNTg5LTguMDE3LDguMDE3YzAsNC40MjcsMy41ODksOC4wMTcsOC4wMTcsOC4wMTdoMzQuMjA1DQoJYzQuNDI3LDAsOC4wMTctMy41ODksOC4wMTctOC4wMTdDODQuNDQzLDM3OS44NCw4MC44NTMsMzc2LjI1MSw3Ni40MjYsMzc2LjI1MXoiLz4NCjxwYXRoIGQ9Ik00Mi4yMjEsMTUyLjg1MmgzNC4yMDVjNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN2MwLTQuNDI3LTMuNTg5LTguMDE3LTguMDE3LTguMDE3SDQyLjIyMQ0KCWMtNC40MjcsMC04LjAxNywzLjU4OS04LjAxNyw4LjAxN0MzNC4yMDUsMTQ5LjI2MiwzNy43OTQsMTUyLjg1Miw0Mi4yMjEsMTUyLjg1MnoiLz4NCjxwYXRoIGQ9Ik0yNjQuNTUxLDEwMi42MTRoLTM0LjIwNWMtNC40MjcsMC04LjAxNywzLjU4OS04LjAxNyw4LjAxN2MwLDQuNDI3LDMuNTg5LDguMDE3LDguMDE3LDguMDE3aDM0LjIwNQ0KCWM0LjQyNywwLDguMDE3LTMuNTg5LDguMDE3LTguMDE3QzI3Mi41NjgsMTA2LjIwMywyNjguOTc5LDEwMi42MTQsMjY0LjU1MSwxMDIuNjE0eiIvPg0KPHBhdGggZD0iTTI5OC43NTYsMTE4LjY0N2gzNC4yMDVjNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN2MwLTQuNDI3LTMuNTg5LTguMDE3LTguMDE3LTguMDE3aC0zNC4yMDUNCgljLTQuNDI3LDAtOC4wMTcsMy41ODktOC4wMTcsOC4wMTdDMjkwLjczOSwxMTUuMDU4LDI5NC4zMjgsMTE4LjY0NywyOTguNzU2LDExOC42NDd6Ii8+DQo8cGF0aCBkPSJNNDA5LjM4NiwxMTAuNjNjMC00LjQyNy0zLjU4OS04LjAxNy04LjAxNy04LjAxN2gtMzQuMjA1Yy00LjQyNywwLTguMDE3LDMuNTg5LTguMDE3LDguMDE3DQoJYzAsNC40MjcsMy41ODksOC4wMTcsOC4wMTcsOC4wMTdoMzQuMjA1QzQwNS43OTcsMTE4LjY0Nyw0MDkuMzg2LDExNS4wNTgsNDA5LjM4NiwxMTAuNjN6Ii8+DQo8cGF0aCBkPSJNNDY5Ljc3OSwxMDIuNjE0aC0zNC4yMDVjLTQuNDI3LDAtOC4wMTcsMy41ODktOC4wMTcsOC4wMTdjMCw0LjQyNywzLjU4OSw4LjAxNyw4LjAxNyw4LjAxN2gzNC4yMDUNCgljNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN0M0NzcuNzk1LDEwNi4yMDMsNDc0LjIwNiwxMDIuNjE0LDQ2OS43NzksMTAyLjYxNHoiLz4NCjxwYXRoIGQ9Ik0yMTMuMjQ0LDIyOS44MTJjMTEuMDM4LDAsMjEuMTc2LDUuMDczLDI3LjgxLDEzLjkxN2MyLjY1NywzLjU0MSw3LjY4Miw0LjI2LDExLjIyMywxLjYwMnM0LjI1OC03LjY4MiwxLjYwMi0xMS4yMjMNCgljLTkuNjkzLTEyLjkyLTI0LjUwMy0yMC4zMjktNDAuNjM2LTIwLjMyOWMtMjcuOTk1LDAtNTAuNzcyLDIyLjc3Ny01MC43NzIsNTAuNzcyczIyLjc3Nyw1MC43NzIsNTAuNzcyLDUwLjc3Mg0KCWMxNi4xMiwwLDMwLjkyNC03LjQsNDAuNjE3LTIwLjMwM2MyLjY1OS0zLjU0LDEuOTQ1LTguNTY1LTEuNTk1LTExLjIyNGMtMy41NC0yLjY1OS04LjU2Ni0xLjk0NS0xMS4yMjQsMS41OTUNCgljLTYuNjM2LDguODMzLTE2Ljc2OCwxMy44OTktMjcuNzk4LDEzLjg5OWMtMTkuMTU1LDAtMzQuNzM5LTE1LjU4NC0zNC43MzktMzQuNzM5UzE5NC4wOSwyMjkuODEyLDIxMy4yNDQsMjI5LjgxMnoiLz4NCjxwYXRoIGQ9Ik0zNTguMDc5LDI0Ny40NDljMC0xOC41NjYtMTUuMTA1LTMzLjY3LTMzLjY3LTMzLjY3aC00Mi43NTZjLTQuNDI3LDAtOC4wMTcsMy41ODktOC4wMTcsOC4wMTd2ODUuNTExDQoJYzAsNC40MjcsMy41ODksOC4wMTcsOC4wMTcsOC4wMTdjNC40MjcsMCw4LjAxNy0zLjU4OSw4LjAxNy04LjAxN3YtMjYuMTg4aDIyLjE4bDIzLjI0OCwzMC45OThjMS41NzYsMi4xLDMuOTgzLDMuMjA3LDYuNDIsMy4yMDcNCgljMS42NzQsMCwzLjM2Mi0wLjUyMyw0LjgwNC0xLjYwM2MzLjU0MS0yLjY1Niw0LjI2LTcuNjgyLDEuNjAzLTExLjIyM2wtMTYuNTc1LTIyLjENCglDMzQ2LjU5NiwyNzcuMTg4LDM1OC4wNzksMjYzLjYzNiwzNTguMDc5LDI0Ny40NDl6IE0zMjQuNDA5LDI2NS4wODZIMjg5LjY3di0zNS4yNzNoMzQuNzM5YzkuNzI1LDAsMTcuNjM3LDcuOTEyLDE3LjYzNywxNy42MzcNCglTMzM0LjEzNCwyNjUuMDg2LDMyNC40MDksMjY1LjA4NnoiLz4NCjxwYXRoIGQ9Ik00NjAuNjU0LDIyMC45OThjLTAuMzY4LTMuNjc1LTMuMTk4LTYuNjIzLTYuODU1LTcuMTRjLTMuNjUzLTAuNTE4LTcuMTk0LDEuNTMxLTguNTY1LDQuOTYxbC0yNi43NjIsNjYuOTAzbC0yNi43NjItNjYuOTAzDQoJYy0xLjM3Mi0zLjQyOS00LjkwOC01LjQ3NC04LjU2NS00Ljk2MWMtMy42NTcsMC41MTctNi40ODcsMy40NjUtNi44NTUsNy4xNGwtOC41NTEsODUuNTExYy0wLjQ0LDQuNDA2LDIuNzc0LDguMzM0LDcuMTgsOC43NzUNCgljNC40MDEsMC40NCw4LjMzMy0yLjc3NCw4Ljc3NS03LjE4bDUuMjkzLTUyLjkyN2wyMi4wNDMsNTUuMTA3YzEuMjE3LDMuMDQzLDQuMTY0LDUuMDM5LDcuNDQzLDUuMDM5czYuMjI2LTEuOTk2LDcuNDQzLTUuMDM5DQoJbDIyLjA0My01NS4xMDdsNS4yOTMsNTIuOTI3YzAuNDE0LDQuMTM0LDMuODk4LDcuMjE5LDcuOTY4LDcuMjE5YzAuMjY3LDAsMC41MzYtMC4wMTMsMC44MDctMC4wNDENCgljNC40MDYtMC40NCw3LjYyLTQuMzY5LDcuMTgtOC43NzVMNDYwLjY1NCwyMjAuOTk4eiIvPg0KPC9zdmc+
+description: "Internal CRM as a System of Record"
+address: "{{Input Required: Okta-Domain}}.okta.com"
+defaultSyncFrequency: HOURLY
+defaultSyncMinInterval: 1
+defaultApiCallFrequency: SECONDLY
+defaultApiCallMinInterval: 1
+adapter:
+  hostname: "adapter.sgnl.svc.cluster.local"
+  port: 80
+  config: "ewogICAgInZlcnNpb24iOiAxLAogICAgImNvbmZpZyI6IHsKICAgICAgICAicmVxdWVzdFRpbWVvdXQiOiAiMTBzIiwKICAgICAgICAib2t0YSI6IHsKICAgICAgICAgICAgImFwaVZlcnNpb24iOiAidjEiCiAgICAgICAgfQogICAgfQp9"
+  apiVersion: "V1"
+  disableTls: true
+  auth:
+    - oAuth2ClientCredentials:
+        clientId: "{{Input Required: Client-ID}}"
+        tokenUrl: "https://{{Input Required: Okta-Domain}}/oauth2/v1/token"
+        authStyle: AutoDetect
+        clientSecret: "{{Input Required: Client-Secret}}"
+        scope: "okta.users.read okta.groups.read"
+
+entities:
+  User:
+    displayName: OktaUser
+    externalId: User
+    description: User entity in Okta
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: status
+        externalId: status
+        type: String
+      - name: created
+        externalId: created
+        type: DateTime
+      - name: activated
+        externalId: activated
+        type: DateTime
+      - name: statusChanged
+        externalId: statusChanged
+        type: DateTime
+      - name: lastLogin
+        externalId: lastLogin
+        type: DateTime
+      - name: lastUpdated
+        externalId: lastUpdated
+        type: DateTime
+      - name: passwordChanged
+        externalId: passwordChanged
+        type: DateTime
+      - name: transitioningToStatus
+        externalId: transitioningToStatus
+        type: String
+      - name: type__id
+        externalId: type__id
+        type: String
+      - name: profile__login
+        externalId: profile__login
+        type: String
+      - name: profile__email
+        externalId: profile__email
+        type: String
+        indexed: true
+      - name: profile__secondEmail
+        externalId: profile__secondEmail
+        type: String
+      - name: profile__firstName
+        externalId: profile__firstName
+        type: String
+      - name: profile__lastName
+        externalId: profile__lastName
+        type: String
+      - name: profile__middleName
+        externalId: profile__middleName
+        type: String
+      - name: profile__honorificPrefix
+        externalId: profile__honorificPrefix
+        type: String
+      - name: profile__honorificSuffix
+        externalId: profile__honorificSuffix
+        type: String
+      - name: profile__title
+        externalId: profile__title
+        type: String
+      - name: profile__displayName
+        externalId: profile__displayName
+        type: String
+      - name: profile__nickName
+        externalId: profile__nickName
+        type: String
+      - name: profile__profileUrl
+        externalId: profile__profileUrl
+        type: String
+      - name: profile__primaryPhone
+        externalId: profile__primaryPhone
+        type: String
+      - name: profile__mobilePhone
+        externalId: profile__mobilePhone
+        type: String
+      - name: profile__streetAddress
+        externalId: profile__streetAddress
+        type: String
+      - name: profile__city
+        externalId: profile__city
+        type: String
+      - name: profile__state
+        externalId: profile__state
+        type: String
+      - name: profile__zipCode
+        externalId: profile__zipCode
+        type: String
+      - name: profile__countryCode
+        externalId: profile__countryCode
+        type: String
+      - name: profile__postalAddress
+        externalId: profile__postalAddress
+        type: String
+      - name: profile__preferredLanguage
+        externalId: profile__preferredLanguage
+        type: String
+      - name: profile__locale
+        externalId: profile__locale
+        type: String
+      - name: profile__timezone
+        externalId: profile__timezone
+        type: String
+      - name: profile__userType
+        externalId: profile__userType
+        type: String
+      - name: profile__employeeNumber
+        externalId: profile__employeeNumber
+        type: String
+      - name: profile__costCenter
+        externalId: profile__costCenter
+        type: String
+      - name: profile__organization
+        externalId: profile__organization
+        type: String
+      - name: profile__division
+        externalId: profile__division
+        type: String
+      - name: profile__department
+        externalId: profile__department
+        type: String
+      - name: profile__managerId
+        externalId: profile__managerId
+        type: String
+        indexed: true
+      - name: profile__manager
+        externalId: profile__manager
+        type: String
+  Group:
+    displayName: OktaGroup
+    externalId: Group
+    description: Group entity in Okta
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: created
+        externalId: created
+        type: DateTime
+      - name: lastUpdated
+        externalId: lastUpdated
+        type: DateTime
+      - name: lastMembershipUpdated
+        externalId: lastMembershipUpdated
+        type: DateTime
+      - name: objectClass
+        externalId: objectClass
+        type: String
+        list: true
+      - name: type
+        externalId: type
+        type: String
+      - name: profile__name
+        externalId: profile__name
+        type: String
+        indexed: true
+      - name: profile__description
+        externalId: profile__description
+        type: String
+  GroupMember:
+    displayName: GroupMember
+    externalId: GroupMember
+    description: Group Member entity in Okta
+    syncFrequency: HOURLY
+    syncMinInterval: 1
+    apiCallFrequency: SECONDLY
+    apiCallMinInterval: 1
+    pageSize: 100
+    pagesOrderedById: false
+    attributes:
+      - name: id
+        externalId: id
+        type: String
+        indexed: true
+        uniqueId: true
+      - name: groupId
+        externalId: groupId
+        type: String
+        indexed: true
+      - name: userId
+        externalId: userId
+        type: String
+        indexed: true
+
+relationships:
+  Member:
+    name: Member
+    fromAttribute: GroupMember.userId
+    toAttribute: User.id
+  GroupMembership:
+    name: GroupMembership
+    fromAttribute: GroupMember.groupId
+    toAttribute: Group.id
+  UserManager:
+    name: Manager
+    fromAttribute: User.profile__managerId
+    toAttribute: User.id
